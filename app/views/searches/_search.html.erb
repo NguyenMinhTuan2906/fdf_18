@@ -1,0 +1,25 @@
+<%= form_for search do |f| %>
+  <div class="form-group">
+    <%= f.label :keywords, t("keywords") %>
+    <%= f.text_field :keywords ,class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, t("category") %>
+    <%= f.select :category_id, @category, {include_blank: true},
+      class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :min_price, t("price_range") %>
+    <%= f.text_field :min_price, size: 10 %> -
+    <%= f.text_field :max_price, size: 10 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :min_rating, t("rating") %>
+    <%= f.text_field :min_rating, size: 10 %>
+  </div>
+
+  <%= f.submit t("search"), class: "btn btn-success create" %>
+<% end %>

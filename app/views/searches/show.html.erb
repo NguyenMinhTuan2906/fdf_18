@@ -1,0 +1,8 @@
+<div class="container search-index">
+  <h4>
+    <%= t ".we_found" %>
+    <span class="red-mark"><%= @search.products.size %></span>
+    <%= t ".result" %>
+  </h4>
+  <%= render partial: "categories/product", collection: @search.products, as: "product" %>
+</div>

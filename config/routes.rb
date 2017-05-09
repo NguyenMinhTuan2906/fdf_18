@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :comments
   resources :orders
   resources :categories
-  resources :searches
+  resources :searches, except: [:edit, :update, :destroy]
 end

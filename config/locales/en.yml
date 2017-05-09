@@ -36,7 +36,6 @@ en:
       register: "Register"
       facebook: Facebook
       google: Google+
-
   products:
     index:
       suggest: "Suggest"
@@ -112,6 +111,11 @@ en:
   product_quantity: "Product Quantity:"
   no_result: "No result was found for keyword: "
   search_here: "What are you looking for?"
+  search: "Search"
+  price_range: "Price Range:"
+  keywords: "Keywords:"
+  advance_search: "Advance Search"
+  rating: "Rating:"
   users:
     new:
       create: "Sign Up"
@@ -192,3 +196,6 @@ en:
       suggest2: "Try different keywords."
       suggest3: "Try more general keywords."
       suggest4: "Try fewer keywords."
+    show:
+      we_found: "We found total"
+      result: "results for you:"

@@ -23,6 +23,10 @@
         </a>
       </ul>
 
+      <div class="nav navbar-nav" id="advance-search">
+        <%= link_to t("advance_search"), new_search_path %>
+      </div>
+
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <ul class="nav navbar-nav navbar-right">
