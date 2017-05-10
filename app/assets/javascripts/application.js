@@ -27,3 +27,5 @@
 //= require i18n/translations
 //= require add_image_product
 //= require star-rating
+//= require js.cookie
+//= require order

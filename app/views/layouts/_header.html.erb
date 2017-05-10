@@ -19,7 +19,7 @@
         <a>
           <%= link_to t(".cart"), orders_path, id: "cart",
             class: "fa fa-shopping-cart" %>
-          <span class="badge">3</span>
+          <span id="cart_size" class="badge"><%= carts_size %></span>
         </a>
       </ul>
 

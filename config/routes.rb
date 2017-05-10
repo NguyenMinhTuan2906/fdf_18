@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
+  resource :orders
   resources :users
   resources :ratings
   resources :products
   resources :comments
-  resources :orders
   resources :categories
   resources :searches, only: [:index, :new]
 end

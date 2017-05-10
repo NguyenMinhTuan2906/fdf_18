@@ -74,12 +74,19 @@
               <li><%= link_to product.name, product_path(product) %></li>
             <% end %>
           </ul>
-          <div class="shopping-button">
-            <a href="#" class="btn btn-default custom-btn">
-              <span class="glyphicon glyphicon-shopping-cart"></span>
-              <%= t "add_cart" %>
-            </a>
-          </div>
+          <% if @product.quantity != 0%>
+            <div id="add_to_cart", class="shopping-button">
+              <a class="btn btn-default custom-btn">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <%= t "add_cart" %>
+              </a>
+            </div>
+          <% else %>
+            <div class="shopping-button">
+              <span class="glyphicon"></span>
+              <%= t "out_of_stock" %>
+            </div>
+          <% end %>
           <ul class="recent-list">
             <h3><%= t(".suggest") %></h3>
             <div class="course_demo">
