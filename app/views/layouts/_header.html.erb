@@ -46,8 +46,9 @@
                   <%= t ".update" %>
                 </a>
                 <ul class="dropdown-menu" >
-                  <li><%= link_to t("add_product"), new_product_path %></li>
-                  <li><%= link_to t("add_category"), new_category_path %></li>
+                  <li><%= link_to t("manage_product"), products_path %></li>
+                  <li><%= link_to t("manage_category"), categories_path %></li>
+                  <li><%= link_to t("manage_user"), users_path %></li>
                 </ul>
               </li>
             <% end %>

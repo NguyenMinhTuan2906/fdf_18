@@ -18,4 +18,5 @@ class Product < ApplicationRecord
   scope :max_price, ->max_price{where "price <= ?", max_price if max_price.present?}
   scope :rating, ->rating{where "current_score >= ?", rating if rating.present?}
   scope :by_category, ->category_id{where category_id: category_id if category_id.present?}
+  scope :favorite, ->{where "current_score >= 4"}
 end

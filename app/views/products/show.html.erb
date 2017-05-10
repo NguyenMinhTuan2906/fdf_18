@@ -83,32 +83,9 @@
             </div>
           <% else %>
             <div class="shopping-button">
-              <span class="glyphicon"></span>
-              <%= t "out_of_stock" %>
+              <%= image_tag("out-stock.png", size: Settings.image.size.out_stock) %>
             </div>
           <% end %>
-          <ul class="recent-list">
-            <h3><%= t(".suggest") %></h3>
-            <div class="course_demo">
-              <ul id="flexiselDemo3">
-                <li><%= link_to image_tag("pic1.jpg"), class: "img-responsive",
-                  alt: "" %><div class="desc">
-                  <h3>STEAMING CRAB</h3>
-                  <p>Wellcome<br> this food very good.</p>
-                </div></li>
-                <li><%= link_to image_tag("pic1.jpg"), class: "img-responsive",
-                  alt: "" %><div class="desc">
-                  <h3>STEAMING CRAB</h3>
-                  <p>Wellcome<br> this food very good.</p>
-                </div></li>
-                <li><%= link_to image_tag("pic1.jpg"), class: "img-responsive",
-                  alt: "" %><div class="desc">
-                  <h3>STEAMING CRAB</h3>
-                  <p>Wellcome<br> this food very good.</p>
-                </div></li>
-              </ul>
-            </div>
-          </ul>
         </div>
       </div>
     </div>

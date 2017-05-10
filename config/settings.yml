@@ -12,6 +12,8 @@ image:
     header_search: "25x22"
     header_avatar: "25x22"
     product_order: "80x80"
+    out_stock: "160x40"
+    favorite_food: "140x140"
 paginate:
   per_page: 3
   users_per_page: 10
