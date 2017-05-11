@@ -34,8 +34,9 @@ en:
       not_have_account: "Does you have account ?"
       forgotten_account: "Forgotten account ?"
       register: "Register"
-      facebook: Facebook
-      google: Google+
+      facebook: "Facebook"
+      google: "Google+"
+      update: "Manager"
   products:
     index:
       suggest: "Suggest"
@@ -116,11 +117,15 @@ en:
   rating: "Rating:"
   advance_search: "Advance Search"
   search: "Search"
-  out_of_stock: "PRODUCT IS OUT OF STOCK"
   thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
   money_icon: "VND"
   /product: " VND / 1 sp"
   error: "Error"
+  see_all: "See all"
+  manage_user: "Manage Users"
+  manage_product: "Manage Products"
+  manage_category: "Manage Categories"
+  price_value: "VND"
   users:
     new:
       create: "Sign Up"
@@ -152,12 +157,12 @@ en:
     error_messages:
       errors: "The form contains"
     slide:
-      wellcome: "Wellcome !"
-      wel_framgia: "Wellcome to Framgia"
-      this_is_pro_1: "This is project 1"
-      food_drink: "Food & Drink"
-      let_experience: "Let experience !"
-      hope_well: "We hope you well"
+      wellcome: "Welcome !"
+      wel_framgia: "Welcome to Framgia Food & Drink"
+      this_is_pro_1: "This is our first project"
+      food_drink: "Food & Drink Management!"
+      let_experience: "Let's experience !"
+      hope_well: "We hope you feel good"
   comments:
     create:
       can't_comment: "Can't comment, please try again !"

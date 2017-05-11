@@ -1,16 +1,62 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* variables */
+
+$crimson: #dc143c;
+$gray-hex: #8c8b8b;
+$red: #f00;
+$purple: #800080;
+$orange: #ffa500;
+$sienna: #a0522d;
+$hotpink: #ff69b4;
+$lime-green: #32cd32;
+$black: #000;
+$white: #fff;
+$gray-light-hex: #aaa;
+$blue-light-hex: #0099aa;
+
 /* body */
 
 body {
   padding-top: 60px;
 }
 
+.fav-form {
+  margin-right: 120px;
+  padding-bottom: 14px;
+  padding-top: 12px;
+}
+
+.fav-food {
+  color: $crimson;
+}
+
+.food-drink-form {
+  margin-top: 50px;
+
+  .work {
+    margin-right: 120px;
+    padding-bottom: 14px;
+    padding-top: 12px;
+  }
+}
+
+.see-all-button {
+  margin-top: 20px;
+}
+
 /*slide*/
 
 .image_slide {
   width: 100%;
+}
+
+.style-hr {
+  border: 0;
+  box-shadow: 0 10px 10px -10px inset;
+  color: $gray-hex;
+  height: 10px;
 }
 
 /* form */
@@ -23,22 +69,22 @@ body {
   margin-bottom: 30px;
   margin-top: 30px;
   li {
-    color: red;
+    color: $red;
     span {
-      color: black;
+      color: $black;
       font-style: italic;
     }
   }
 }
 
 .red-mark {
-  color: red;
+  color: $red;
 }
 
 #error_explanation {
-  color: red;
+  color: $red;
   ul {
-    color: red;
+    color: $red;
     margin-bottom: 30px;
   }
 }
@@ -52,17 +98,17 @@ body {
 
 .sign-up {
   margin-bottom: 40px;
-  margin-top: 20px;
   margin-left: 0px;
   margin-right: 0px;
+  margin-top: 20px;
 }
 
 .title {
-  color: purple;
+  color: $purple;
 }
 
 .add {
-  color: orange;
+  color: $orange;
 }
 
 .img {
@@ -91,22 +137,22 @@ body {
 }
 
 .list {
-  color: Sienna;
+  color: $sienna;
 }
 
 .icon-edit {
   font-size: 20px;
-  color: black;
+  color: $black;
 }
 
 .custom-btn {
-  background-color: hotpink;
+  background-color: $hotpink;
 }
 
 .plus-edit {
-  color: LimeGreen;
+  color: $lime-green;
   a {
-    color: black;
+    color: $black;
   }
 }
 
@@ -204,7 +250,7 @@ body {
     left: 1px;
     top: 31px;
     /*Change for different outline color*/
-    border-right-color: #FFFFFF;
+    border-right-color: $white;
     border-width: 15px;
   }
   /*****Right Arrow*****/
@@ -221,7 +267,7 @@ body {
     right: -14px;
     top: 31px;
     /*Change for different outline color*/
-    border-left-color: #FFFFFF;
+    border-left-color: $white;
     border-width: 15px;
   }
 }
@@ -245,7 +291,7 @@ body {
 }
 
 .text-right {
-  color: black;
+  color: $black;
 }
 
 .cart-icon {
@@ -294,7 +340,7 @@ Start rating
   width: 25px;
   height: 25px;
   font-size: 0;
-  color: #fff;
+  color: $white;
   background: transparent url('loading.gif') top left no-repeat;
   border: none;
 }
@@ -336,7 +382,7 @@ Start rating
 }
 
 .rating-container .empty-stars {
-  color: #aaa;
+  color: $gray-light-hex;
 }
 
 .rating-container .filled-stars {
@@ -707,8 +753,8 @@ ul.dropdown-menu {
 }
 
 .button {
-  background: #0099aa;
-  color: white;
+  background: $blue-light-hex;
+  color: $white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
