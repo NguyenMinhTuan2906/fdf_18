@@ -81,7 +81,7 @@ en:
   your_cart: "Your Cart"
   shopping_cart: "Shopping Cart"
   continue: "Continue Shopping"
-  add_items: "Add more items?"
+  by_click_pay: "By clicking the payment button, you will pay for this shopping cart."
   update_cart: "Update Cart"
   total_cost: "Total Cost: "
   address: "Address:"
@@ -126,6 +126,8 @@ en:
   manage_product: "Manage Products"
   manage_category: "Manage Categories"
   price_value: "VND"
+  pay: "Payment"
+  thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
   users:
     new:
       create: "Sign Up"
@@ -182,6 +184,12 @@ en:
     remove_cart: "Removed into cart !"
     input_number: "Please input number"
     updated: "Updated"
+    sorry_only_have: "Sorry, we only have "
+    product_for_item: " products for item "
+    please_update_cart: "\n Please update your cart"
+    this_product: "Sorry, product "
+    out_stock: " is out of stock. We will update soon."
+    quantity_lager_0: "Quantity must be greate 0"
   categories:
     new:
       create: "Create new category"

@@ -26,6 +26,23 @@ $(document).ready(function(){
       return false;
     }
   })
+
+  $('#open-review-box').on("click",function(e){
+    $.ajax({
+      url: '/comments',
+      type: 'post',
+      data: {
+        check_login: true
+      },
+      success: function(result){
+        $('#login').click();
+        if ($('#login').is(':visible') == false ) {
+          window.location.replace(result.login_url);
+        }
+      }
+    });
+  })
+
 });
 
 $(function(){

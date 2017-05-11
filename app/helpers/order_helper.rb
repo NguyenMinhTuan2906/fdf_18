@@ -6,7 +6,11 @@ module OrderHelper
   end
 
   def total_cost
-    @order.line_items.map{|f| f.product.price * f.quantity }.sum
+    begin
+      @order.line_items.map{|f| f.product.price * f.quantity }.sum
+    rescue
+      return 0
+    end
   end
 
   def cart_data

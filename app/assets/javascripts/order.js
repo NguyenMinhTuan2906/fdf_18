@@ -42,7 +42,7 @@ $(document).ready(function(){
   })
 
   $('.quantity_pro_cart input').on('keypress', function(e){
-    if (e.which != 8 && isNaN(String.fromCharCode(e.which))) {
+    if ((e.which != 8 && isNaN(String.fromCharCode(e.which))) || (e.keyCode == '32')) {
       e.preventDefault();
       alert(I18n.t('javascript.input_number'));
     }
@@ -50,21 +50,57 @@ $(document).ready(function(){
     if (e.keyCode == '13'){
       e.preventDefault();
       var quantity = $(this).val();
-      var product_id = Number($(this).data('product_id'));
-      var hash = {};
 
-    if (Cookies.getJSON('cart')){
-      hash = Cookies.getJSON('cart');
-      if (hash.hasOwnProperty(product_id)) {
-        hash[product_id] = quantity;
+      if (quantity > 0) {
+        var product_id = Number($(this).data('product_id'));
+        var hash = {};
+
+        if (Cookies.getJSON('cart')){
+          hash = Cookies.getJSON('cart');
+          if (hash.hasOwnProperty(product_id)) {
+            hash[product_id] = quantity;
+          }
+        }
+
+        Cookies.set('cart', hash);
+        $('#total_cost').text(recaculate_cost (hash));
+        alert(I18n.t('javascript.updated'));
+      } else if (quantity == 0){
+        alert(I18n.t('javascript.quantity_lager_0'));
+      } else {
+        alert(I18n.t('javascript.input_number'));
       }
     }
-
-    Cookies.set('cart', hash);
-    $('#total_cost').text(recaculate_cost (hash));
-    alert(I18n.t('javascript.updated'));
-    }
   })
+
+  $('#pay').on('click',function(){
+    $.ajax({
+      url: '/orders',
+      type: 'post',
+      dateType: 'json',
+      success: function(result){
+        if (result.quantity == 0) {
+          alert(I18n.t('javascript.this_product') + result.product_name +
+            I18n.t('javascript.out_stock'));
+        } else if (result.quantity > 0) {
+          alert(I18n.t('javascript.sorry_only_have') + result.quantity +
+            I18n.t('javascript.product_for_item') + result.product_name +
+            I18n.t('javascript.please_update_cart'));
+        }else if (result.not_login) {
+          $('#login').click();
+        } else if (result.alert){
+          alert(result.alert);
+        } else {
+          document.location.href="/";
+        }
+      },
+      error: function(result){
+        alert(result.reason);
+        location.reload();
+      }
+    });
+  })
+
 });
 
 function recaculate_cost(hash){
