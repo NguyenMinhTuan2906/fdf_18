@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include AjaxHelper
   include LoadPageHelper
+  include OrderHelper
 
   private
 

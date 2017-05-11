@@ -82,7 +82,7 @@ en:
   continue: "Continue Shopping"
   add_items: "Add more items?"
   update_cart: "Update Cart"
-  total_price: "Total Price: "
+  total_cost: "Total Cost: "
   address: "Address:"
   phone: "Phone:"
   your_profile: "Profile Detail"
@@ -116,6 +116,11 @@ en:
   rating: "Rating:"
   advance_search: "Advance Search"
   search: "Search"
+  out_of_stock: "PRODUCT IS OUT OF STOCK"
+  thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
+  money_icon: "VND"
+  /product: " VND / 1 sp"
+  error: "Error"
   users:
     new:
       create: "Sign Up"
@@ -164,10 +169,14 @@ en:
       rating_comment: "Add your comment"
   javascript:
     please_enter: "Please enter first !"
-    error_comment: "Error, please try again: \n"
     error_comment: "\n Error, please try again !"
     error_rating: "\n Error, please try again !"
     not_correct_user: "Nor correct user"
+    added_to_cart: "Added to cart !"
+    error_cart: "\n Error, please try again !"
+    remove_cart: "Removed into cart !"
+    input_number: "Please input number"
+    updated: "Updated"
   categories:
     new:
       create: "Create new category"
