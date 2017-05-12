@@ -8,9 +8,10 @@ class Product < ApplicationRecord
     allow_destroy: true
 
   validates :description, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, numericality: { greater_than: 0 }
   validates :quantity, presence: true
   validates :name, presence: true, uniqueness: {case_sensitive: false}
+  validates :quantity, numericality: { greater_than: -1 }
 
   self.per_page = 5
   scope :search, ->search{where "name LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%"}

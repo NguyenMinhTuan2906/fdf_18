@@ -28,7 +28,7 @@ class RatingsController < ApplicationController
   def validate_user?
     @rating = Rating.find_by id: params["id"]
     unless @rating.user.is_user? @current_user
-      render_error
+      render_text_error t(".not_correct_user")
     end
   end
 end
