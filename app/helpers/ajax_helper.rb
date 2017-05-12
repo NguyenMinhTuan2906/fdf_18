@@ -37,4 +37,10 @@ module AjaxHelper
     render json: {
     }, status: :created
   end
+
+  def render_success_order order_id
+    render json: {
+      order_id: order_id
+    }, status: :created
+  end
 end

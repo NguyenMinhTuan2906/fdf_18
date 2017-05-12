@@ -36,7 +36,6 @@ body {
   margin-top: 50px;
 
   .work {
-    margin-right: 120px;
     padding-bottom: 14px;
     padding-top: 12px;
   }
@@ -290,6 +289,10 @@ body {
   margin-bottom: 40px;
 }
 
+.cart-form .panel-heading h4.text-center{
+  margin: 5px 0;
+}
+
 .text-right {
   color: $black;
 }
@@ -305,7 +308,7 @@ body {
 }
 
 .text-right {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 /* show product */
@@ -316,7 +319,6 @@ body {
 .action-button {
   float: right;
   margin-top: -35px;
-  margin-right: 40px;
 }
 
 .image-delete {
@@ -325,11 +327,6 @@ body {
 
 .badge-size {
   margin-top: -28px;
-}
-
-.shopping-button {
-  margin-left: -220px;
-  margin-top: -33px;
 }
 
 /*
@@ -343,6 +340,10 @@ Start rating
   color: $white;
   background: transparent url('loading.gif') top left no-repeat;
   border: none;
+}
+
+.out_stock_rating {
+  padding-top: 50px
 }
 
 /*

@@ -90,6 +90,8 @@ $(document).ready(function(){
           $('#login').click();
         } else if (result.alert){
           alert(result.alert);
+        } else if (result.order_id){
+          document.location.href = "/orders/" + result.order_id;
         } else {
           document.location.href="/";
         }
