@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_many :line_items
-  has_many :comments
-  has_many :ratings
+  has_many :line_items, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :ratings, dependent: :destroy
   has_many :product_images, dependent: :destroy
   accepts_nested_attributes_for :product_images, reject_if: lambda {|attr| attr[:image].blank?},
     allow_destroy: true

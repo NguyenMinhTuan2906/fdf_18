@@ -3,9 +3,9 @@ class User < ApplicationRecord
   before_save :email_downcase
   enum role: [:admin, :user, :guest]
 
-  has_many :comments
-  has_many :orders
-  has_many :ratings
+  has_many :comments, dependent: :destroy
+  has_many :orders, dependent: :destroy
+  has_many :ratings, dependent: :destroy
   validates :name, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
