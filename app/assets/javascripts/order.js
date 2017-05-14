@@ -103,13 +103,25 @@ $(document).ready(function(){
     });
   })
 
+  hide_all_order_detail();
+  $('.list-group-item').on('click', function(e){
+    hide_all_order_detail();
+    $('#order_detail_'+$(this).data('itemid')).show();
+  })
+
 });
 
 function recaculate_cost(hash){
-  var total_product_cost = 0
+  var total_product_cost = 0;
   $.each( hash, function( product_id, quantity ) {
     var element = $('#product_cart_' + product_id);
     total_product_cost += quantity * element.data('price');
   });
-  return total_product_cost
+  return total_product_cost;
+}
+
+function hide_all_order_detail(){
+  for (var i = 1; i < $('#ordersize').data('ordersize'); i++) {
+    $('#order_detail_'+i).hide();
+  }
 }

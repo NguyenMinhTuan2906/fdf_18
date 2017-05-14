@@ -37,6 +37,7 @@ en:
       facebook: "Facebook"
       google: "Google+"
       update: "Manager"
+      your-orders-list: "Your order"
   products:
     index:
       suggest: "Suggest"
@@ -129,6 +130,9 @@ en:
   price_value: "VND"
   pay: "Payment"
   thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
+  your_orders: "You orders"
+  detail: "Detail"
+  total_cost: "Total cost:"
   users:
     new:
       create: "Sign Up"

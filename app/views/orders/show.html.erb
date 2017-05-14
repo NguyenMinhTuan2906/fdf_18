@@ -21,12 +21,13 @@
                 </h5>
               </div>
               <div class="col-xs-3 carts col-xs-offset-3">
-                <%= link_to t("continue"), root_path, class: "btn btn-success pull-right"%>
+                <%= link_to t("continue"), root_path,
+                  class: "btn btn-success pull-right"%>
               </div>
             </div>
           </div>
         </div>
-        <% if carts_size > 0 %>
+        <% if order_size > 0 %>
           <div class="panel-body box-shadow">
             <div id="carts_list">
               <%= render partial: "orders/product_cart", collection: @order.line_items %>
