@@ -36,7 +36,7 @@ Product.create! name: "Cua hap bia",
   category_id: 3
 
 ProductImage.create! product_id: 1,
-  remote_image_url: "http://sesan.com.vn/upload/hinh-anh/hinh-anh-thumb-1373991508.jpg"
+  image:"1.jpg"
 
 Product.create! name: "Cua rang muoi",
   description: "Cua rang muoi la mon an kha gan gui va mang lai
