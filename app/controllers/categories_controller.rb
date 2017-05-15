@@ -47,7 +47,7 @@ class CategoriesController < ApplicationController
     else
       flash[:danger] = t ".delete_fail"
     end
-    redirect_to root_url
+    redirect_to categories_path
   end
 
   private
@@ -71,7 +71,7 @@ class CategoriesController < ApplicationController
   def verify_category
     if @category.products.any?
       flash[:danger] = t ".can_not_delete"
-      redirect_to @category
+      redirect_to categories_path
     end
   end
 end

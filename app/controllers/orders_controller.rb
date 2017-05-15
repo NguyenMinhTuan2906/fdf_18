@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_action :cart_data, only:[:show]
 
+  def index
+    @orders = Order.find_by_user_id current_user.id
+  end
+
   def create
     unless current_user
       store_location

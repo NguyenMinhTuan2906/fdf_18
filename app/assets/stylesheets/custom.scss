@@ -828,3 +828,29 @@ ul.dropdown-menu {
   padding-bottom: 15px;
   padding-top: 15px;
 }
+
+/**
+ * Order
+ */
+
+.list-group-item {
+  .item-order {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+#accordion .glyphicon {
+  margin-right:10px;
+}
+.panel-collapse>.list-group .list-group-item:first-child {
+  border-top-right-radius: 0;border-top-left-radius: 0;
+}
+.panel-collapse>.list-group .list-group-item {
+  border-width: 1px 0;
+}
+.panel-collapse>.list-group {
+  margin-bottom: 0;
+}
+.panel-collapse .list-group-item {
+  border-radius:0;
+}

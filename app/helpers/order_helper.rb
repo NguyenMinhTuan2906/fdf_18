@@ -9,11 +9,15 @@ module OrderHelper
     @order.line_items.size
   end
 
-  def total_cost
-    begin
-      @order.line_items.map{|f| f.product.price * f.quantity }.sum
-    rescue
-      return 0
+  def total_cost orders = nil
+    if orders
+      return orders.line_items.map{|f| f.product.price * f.quantity }.sum
+    else
+      begin
+        @order.line_items.map{|f| f.product.price * f.quantity }.sum
+      rescue
+        return 0
+      end
     end
   end
 
