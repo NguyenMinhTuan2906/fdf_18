@@ -28,6 +28,7 @@ module SessionsHelper
   def log_out
     forget current_user
     session.delete :user_id
+    cookies.delete :cart
     @current_user = nil
   end
 

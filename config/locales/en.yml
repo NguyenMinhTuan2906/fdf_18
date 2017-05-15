@@ -41,7 +41,7 @@ en:
     index:
       suggest: "Suggest"
       product_list: "Product List"
-      add_products: "add more product"
+      add_products: "Add more product"
     show:
       by_admin: "by Admin"
       comments: "comments"
@@ -61,7 +61,7 @@ en:
     update:
       success: "Product has been updated!"
     destroy:
-      success: "Image has been deleted!"
+      success: "Product has been deleted!"
   home_pages:
     about:
       about: "About"
@@ -122,7 +122,7 @@ en:
   money_icon: "VND"
   /product: " VND / 1 sp"
   error: "Error"
-  see_all: "See all"
+  see_all: " See all"
   manage_user: "Manage Users"
   manage_product: "Manage Products"
   manage_category: "Manage Categories"
@@ -149,6 +149,8 @@ en:
       success: "Your profile has been updated!"
     index:
       all_users: "All Users"
+    destroy:
+      success: "Success"
   sessions:
     create:
       invalid: "Wrong email or password. Please try again!"
@@ -209,7 +211,7 @@ en:
       success: "Category has been deleted!"
     index:
       category_list: "Categories list"
-      add_categories: "add more category"
+      add_categories: "Add more category"
   searches:
     index:
       we_found: "We've found"

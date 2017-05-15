@@ -1,8 +1,8 @@
 <% provide :title, @product.name %>
 <div class="main">
   <div class="reservation_top" id="food_detail">
-    <div class="container">
-      <div class="row">
+    <div class="container box-shadow">
+      <div class="row" >
         <div class="col-md-8">
           <div class="post1">
             <h3><a><%= @product.name %></a></h3>
@@ -75,6 +75,7 @@
         </div>
         <div class="col-md-4">
           <div class="category_widget">
+            <hr class="style-hr">
             <h3><%= t ".category" %></h3>
             <ul class="list-unstyled arrow">
               <li>
@@ -86,10 +87,12 @@
             </ul>
           </div>
           <ul class="blog-list1">
+            <hr class="style-hr">
             <h3><%= t ".tags" %></h3>
             <% @category.products.each do |product| %>
               <li><%= link_to product.name, product_path(product) %></li>
             <% end %>
+            <hr class="style-hr">
           </ul>
         </div>
       </div>

@@ -56,7 +56,7 @@ class ProductsController < ApplicationController
     else
       flash[:danger] = t ".delete_fail"
     end
-    redirect_to root_url
+    redirect_to products_path
   end
 
   private
