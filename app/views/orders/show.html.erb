@@ -32,6 +32,18 @@
             <div id="carts_list">
               <%= render partial: "orders/product_cart", collection: @order.line_items %>
             </div>
+            <div class="row box-shadow">
+              <div class="text-center">
+                <div class="col-xs-9">
+                  <h6 class="text-right"><%= t "by_click_pay" %></h6>
+                </div>
+                <div class="col-xs-3">
+                  <button id="pay" type="submit" class="btn btn-sm btn-block btn-success">
+                    <%= t "pay" %>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         <% else %>
           <div class="row">

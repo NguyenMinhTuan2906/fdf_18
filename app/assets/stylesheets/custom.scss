@@ -13,6 +13,7 @@ $hotpink: #ff69b4;
 $lime-green: #32cd32;
 $black: #000;
 $white: #fff;
+$pink: #d17581;
 $gray-light-hex: #aaa;
 $blue-light-hex: #0099aa;
 $rgba-a: rgba(0, 0, 0, 0.2);
@@ -194,11 +195,14 @@ body {
   transition: height 0.2s;
 }
 
-.stars
-{
-    margin: 20px 0;
-    font-size: 24px;
-    color: #d17581;
+.delete-comment-dropdown {
+  cursor: pointer;
+}
+
+.stars {
+  margin: 20px 0;
+  font-size: 24px;
+  color: $pink;
 }
 
 /* show comment*/

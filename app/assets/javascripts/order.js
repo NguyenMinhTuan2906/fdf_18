@@ -104,6 +104,7 @@ $(document).ready(function(){
   })
 
   hide_all_order_detail();
+  show_first_order_detail();
   $('.list-group-item').on('click', function(e){
     hide_all_order_detail();
     $('#order_detail_'+$(this).data('itemid')).show();
@@ -121,7 +122,11 @@ function recaculate_cost(hash){
 }
 
 function hide_all_order_detail(){
-  for (var i = 1; i < $('#ordersize').data('ordersize'); i++) {
+  for (var i = 0; i < $('#ordersize').data('ordersize'); i++) {
     $('#order_detail_'+i).hide();
   }
+}
+
+function show_first_order_detail(){
+  $('#order_detail_0').show();
 }
