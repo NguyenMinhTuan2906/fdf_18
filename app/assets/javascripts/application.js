@@ -28,3 +28,4 @@
 //= require star-rating
 //= require js.cookie
 //= require order
+//= require delete-comment

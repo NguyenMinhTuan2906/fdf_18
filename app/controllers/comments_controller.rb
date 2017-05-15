@@ -20,6 +20,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find_by id: params[:id]
+    if @comment.destroy
+      delete_comment_success @comment.id
+    else
+      render_error @comment
+    end
+  end
+
   private
 
   def comment_params

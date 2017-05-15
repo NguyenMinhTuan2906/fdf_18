@@ -10,6 +10,17 @@
         <div class="panel panel-default arrow left">
           <div class="panel-body">
             <header class="text-left">
+              <% if current_user && current_user.admin? &&
+                current_user.id == comment.user.id %>
+                <div class="dropdown pull-right delete-comment-dropdown">
+                  <a data-toggle="dropdown" ><b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="delete-comment" data-commentid=<%= comment.id %>>
+                      <%= t("delete") %>
+                    </li>
+                  </ul>
+                </div>
+              <% end %>
               <div class="comment-user"><i class="fa fa-user"></i>
                 <%= comment.user.name %>
               </div>

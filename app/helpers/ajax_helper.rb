@@ -43,4 +43,10 @@ module AjaxHelper
       order_id: order_id
     }, status: :created
   end
+
+  def delete_comment_success comment_id
+    render json: {
+      comment_id: comment_id
+    }, status: :created
+  end
 end
