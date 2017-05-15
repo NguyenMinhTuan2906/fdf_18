@@ -10,8 +10,13 @@ $(document).ready(function(){
         dateType: 'json',
         data: $(this).serialize(),
         success: function(result){
-          $(result.html_comment).insertBefore('#comment_list');
-          $('#commets_size').text(parseInt($("#commets_size").text()) + 1);
+          if (result.not_login) {
+            $('#login').click();
+            e.preventDefault();
+          } else {
+            $(result.html_comment).insertBefore('#comment_list');
+            $('#commets_size').text(parseInt($("#commets_size").text()) + 1);
+          }
           clear();
         },
         error: function(result){
@@ -36,7 +41,7 @@ $(document).ready(function(){
       },
       success: function(result){
         $('#login').click();
-        if ($('#login').is(':visible') == false ) {
+          if (($('#login').is(':visible') == false) && result) {
           window.location.replace(result.login_url);
         }
       }

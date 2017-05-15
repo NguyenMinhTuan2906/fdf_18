@@ -5,6 +5,10 @@ module OrderHelper
     @cart.size
   end
 
+  def order_size
+    @order.line_items.size
+  end
+
   def total_cost
     begin
       @order.line_items.map{|f| f.product.price * f.quantity }.sum

@@ -9,7 +9,7 @@
             <% if current_user && current_user.admin? %>
               <div class="btn-group action-button">
                 <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
-                  <i class="glyphicon glyphicon-cog"></i><span class="caret"></span>
+                  <i class="glyphicon glyphicon-cog"></i>
                 </a>
                 <ul class="dropdown-menu">
                   <li>
@@ -36,14 +36,31 @@
                 <%= t ".by_admin" %>
               </div>
             </div>
-            <% @product_images.each do |product_images| %>
-              <%= image_tag(product_images.image,
-                size: Settings.image.size.food_show) %>
-            <% end %>
+            <div class="row">
+              <div class="col-xs-1">
+                <% @product_images.each do |product_images| %>
+                  <%= image_tag(product_images.image,
+                    size: Settings.image.size.food_show) %>
+                <% end %>
+              </div>
+              <div class="col-xs-11 out_stock_rating">
+                <% if @product.quantity != 0%>
+                  <div id="add_to_cart", class="pull-right">
+                    <a class="btn btn-default custom-btn col-sx-8">
+                      <span class="glyphicon glyphicon-shopping-cart"></span>
+                      <%= t "add_cart" %>
+                    </a>
+                  </div>
+                <% else %>
+                    <%= image_tag("out-stock.png", class: "pull-right",
+                      size: Settings.image.size.out_stock) %>
+                <% end %>
+              </div>
+            </div>
             <p><%= @product.description %></p>
           </div>
           <%= render partial: "comments/add_comment"%>
-          <div class="container">
+          <div>
             <div class="row">
               <div class="col-md-8">
                 <h2 class="page-header"><%= t(".comment_title") %></h2>
@@ -74,18 +91,6 @@
               <li><%= link_to product.name, product_path(product) %></li>
             <% end %>
           </ul>
-          <% if @product.quantity != 0%>
-            <div id="add_to_cart", class="shopping-button">
-              <a class="btn btn-default custom-btn">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-                <%= t "add_cart" %>
-              </a>
-            </div>
-          <% else %>
-            <div class="shopping-button">
-              <%= image_tag("out-stock.png", size: Settings.image.size.out_stock) %>
-            </div>
-          <% end %>
         </div>
       </div>
     </div>

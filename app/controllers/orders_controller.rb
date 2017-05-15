@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
         if @order.save
           cookies.delete :cart
           flash[:success] = t "thank_payed"
-          render_success_home_page
+          render_success_order @order.id
         else
           render_text_error t("error")
         end
@@ -31,10 +31,14 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.new
-    @cart.each do |product_id, quantity|
-      @order.line_items.includes(:products)
-        .new(product_id: product_id, quantity: quantity)
+    if params[:id]
+      @order = Order.includes(:line_items).find_by id: params[:id]
+    else
+      @order = Order.new
+      @cart.each do |product_id, quantity|
+        @order.line_items.includes(:products)
+          .new(product_id: product_id, quantity: quantity)
+      end
     end
   end
 

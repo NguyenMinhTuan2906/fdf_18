@@ -82,6 +82,7 @@ en:
   shopping_cart: "Shopping Cart"
   continue: "Continue Shopping"
   by_click_pay: "By clicking the payment button, you will pay for this shopping cart."
+  payed: "You payed for this shopping cart at "
   update_cart: "Update Cart"
   total_cost: "Total Cost: "
   address: "Address:"
