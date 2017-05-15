@@ -4,7 +4,7 @@ image:
   size:
     logo: "33x21"
     avatar: "80x80"
-    category: "340x224"
+    category: "360x224"
     food_show: "300x200"
     food_size: "750x223"
     food_edit: "100x100"
@@ -25,3 +25,5 @@ gravatar_user:
 cookies:
   time:
     orders: 1
+user:
+  maxname: 10

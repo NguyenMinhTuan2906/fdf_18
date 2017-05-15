@@ -128,11 +128,13 @@ en:
   manage_product: "Manage Products"
   manage_category: "Manage Categories"
   price_value: "VND"
-  pay: "Payment"
+  pay: "Checkout"
+  payed_bt: "ALREADY PAID"
   thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
   your_orders: "You orders"
   detail: "Detail"
   total_cost: "Total cost:"
+  favorite_food: "Favorite Food"
   users:
     new:
       create: "Sign Up"
@@ -154,7 +156,7 @@ en:
     index:
       all_users: "All Users"
     destroy:
-      success: "Success"
+      success: "User have been deleted ! "
   sessions:
     create:
       invalid: "Wrong email or password. Please try again!"
