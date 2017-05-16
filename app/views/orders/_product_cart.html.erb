@@ -27,8 +27,8 @@
     </div>
     <div class="col-xs-4">
       <div class="quantity_pro_cart">
-        <input type="" name="" class="form-control input-sm",
-          min= 1, autocomplete="off" value=<%= product_cart.quantity %>
+        <input type="number" name="" class="form-control input-sm"
+          min= 1 autocomplete="off" value=<%= product_cart.quantity %>
           data-product_id = <%= product_cart.product.id %>
           <% if product_cart.id %> disabled <%end %> >
       </div>

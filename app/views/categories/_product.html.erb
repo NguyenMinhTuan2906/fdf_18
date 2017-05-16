@@ -9,13 +9,15 @@
         <div class="label-product">
           <span class="new"><%= product.price.round(0) %> <%= t "price_value" %></span>
         </div>
-        <div class="mask" >
-          <h2><%= product.name %></h2>
-          <h3><%= product.description %></h3>
-          <div class="info">
-            <i class="fa fa-search-plus"></i>
+        <%= link_to product_path(product) do %>
+          <div class="mask" >
+            <h2><%= product.name %></h2>
+            <h3><%= product.description %></h3>
+            <div class="info">
+              <i class="fa fa-search-plus"></i>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <div class="product_container wow bounceIn" data-wow-delay="0.4s">
         <h3><%= link_to product.name, product_path(product) %></h3>

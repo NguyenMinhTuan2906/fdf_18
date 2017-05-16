@@ -41,16 +41,9 @@ $(document).ready(function(){
     alert(I18n.t('javascript.remove_cart'));
   })
 
-  $('.quantity_pro_cart input').on('keypress', function(e){
-    if ((e.which != 8 && isNaN(String.fromCharCode(e.which))) || (e.keyCode == '32')) {
-      e.preventDefault();
-      alert(I18n.t('javascript.input_number'));
-    }
+  $('.quantity_pro_cart input').on('change', function(e){
 
-    if (e.keyCode == '13'){
-      e.preventDefault();
       var quantity = $(this).val();
-
       if (quantity > 0) {
         var product_id = Number($(this).data('product_id'));
         var hash = {};
@@ -61,16 +54,14 @@ $(document).ready(function(){
             hash[product_id] = quantity;
           }
         }
-
         Cookies.set('cart', hash);
         $('#total_cost').text(recaculate_cost (hash));
-        alert(I18n.t('javascript.updated'));
       } else if (quantity == 0){
-        alert(I18n.t('javascript.quantity_lager_0'));
+        $(this).val('1');
+        $(this).keyup();
       } else {
         alert(I18n.t('javascript.input_number'));
       }
-    }
   })
 
   $('#pay').on('click',function(){

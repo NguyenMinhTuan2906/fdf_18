@@ -36,9 +36,6 @@
           <div class="panel panel-default">
             <div class="panel-heading col-xs-12">
               <h3 class="panel-title col-xs-8"><%= t "detail" %></h3>
-              <h3 class="panel-title col-xs-2"><%= t "total_cost" %></h3>
-              <h3 class="panel-title col-xs-1"><%= total_cost item %></h3>
-              <h3 class="panel-title col-xs-1"><%= t "price_value" %></h3>
             </div>
             <h3 id="ordersize"
               data-ordersize=<%= @orders.size %> style="padding-bottom: 20px">
@@ -47,6 +44,26 @@
               <div >
                 <%= render partial: "orders/product_cart",
                 collection: item.line_items %>
+              </div>
+              <div class="panel-heading">
+                <div class="row text-center">
+                  <div class="col-xs-9">
+                    <h4 class="text-right">
+                      <div>
+                        <%= t "total_cost" %>
+                        <div id="total_cost" class="total-cost">
+                          <%= total_cost item %>
+                        </div>
+                        <%= t "money_icon" %>
+                      </div>
+                    </h4>
+                  </div>
+                    <div class="col-xs-3">
+                      <button class="btn btn-sm btn-block btn-success">
+                        <%= t "payed_bt" %>
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
