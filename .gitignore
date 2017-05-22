@@ -18,7 +18,7 @@ config/initializers/secret_token.rb
 config/database.yml
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
-# public/uploads/
+public/uploads/
 
 # dotenv
 # TODO Comment out this rule if environment variables can be committed

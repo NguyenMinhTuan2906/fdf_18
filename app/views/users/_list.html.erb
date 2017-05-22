@@ -2,7 +2,7 @@
   <%= gravatar_for user, size: Settings.gravatar_user.size %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user.is_user?(user) %>
-    <%= link_to user, method: :delete, data: {confirm: t("confirm")} do %>
+    <%= link_to user, method: :delete, data: {id: user.id}, class: "delete" do %>
       <span class="glyphicon glyphicon-trash btn-xs btn-danger"></span>
     <% end %>
   <% end %>

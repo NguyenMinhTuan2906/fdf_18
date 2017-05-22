@@ -29,3 +29,4 @@
 //= require js.cookie
 //= require order
 //= require delete-comment
+//= require delete_user

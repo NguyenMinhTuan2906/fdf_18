@@ -44,8 +44,8 @@ class UsersController < ApplicationController
       flash[:success] = t ".success"
     else
       flash[:danger] = t ".delete_fail"
+      redirect_to users_url
     end
-    redirect_to users_url
   end
 
   private
